@@ -43,14 +43,6 @@ php5-gmp php5-imap php5-mcrypt php5-xdebug \
 php5-memcached php5-redis php5-common \
 php-apc php5-suhosin php5-cgi
 
-# Make Mongo Available
-
-pecl install mongo
-echo "extension=mongo.so" >> /etc/php5/fpm/php.ini
-apt-get install mongodb mongodb-server
-
-
-
 # Make MCrypt Available
 
 ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available
